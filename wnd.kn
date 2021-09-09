@@ -1,0 +1,12 @@
+var wndMain: wnd@Wnd
+var drawMain: wnd@Draw
+
++var w:int
++var h:int
+
++func init(w:int,h:int,title:[]char)
+	do @w::w
+	do @h::h
+	do @wndMain:: wnd@makeWnd(null, %fix, @w,@h, title)
+	do @drawMain:: wnd@makeDraw(@wndMain, 0, 0, @w,@h, %fix, %fix, false)
+end func
